@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind CSS flexbox gallery</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+
+    <style>
+
+      .toggle-checkbox:checked {
+        right:0;
+        border-color: #68d391;
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background: #68d391;
+      }
+
+      </style>
+    </style>
+  </head>
+  <body>
+    <header class="header p-4 h-24 dark:bg-black dark:text-white text-center font-mono border-b-8 border-red-600 bg-cyan-50 ">
+     
+      <div class="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-8 ">
+        <h1
+        class="text-2xl tracking-tight "
+      >
+        TAILWIND CSS FLEXBOX GALLERY
+      </h1>
+        <div class="group">
+          <a href="#" class="text-xl">Home</a>
+          <div class="mx-2 mt-2 duration-500 border-red-500 opacity-0 group-hover:opacity-100 border-b-2"></div>
+        </div>
+        <div class="group">
+          <a href="#" class="text-xl">Home</a>
+          <div class="mx-2 mt-2 duration-500 border-red-500 opacity-0 group-hover:opacity-100 border-b-2"></div>
+        </div>
+        <div class="group">
+          <a href="#" class="text-xl">Home</a>
+          <div class="mx-2 mt-2 duration-500 border-red-500 opacity-0 group-hover:opacity-100 border-b-2"></div>
+        </div>
+      </div>
+
+    </header>
+
+    <div class="flex items-center justify-center min-h-screen bg-cyan-50">
+    
+      <div class="dark:bg-slate-900 pt-12 pb-12">
+        <div
+          class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
+        >
+  
+          <input
+            type="checkbox"
+            name="toggle"
+            id="toggle"
+            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+          />
+          <label
+            for="toggle"
+            class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+          ></label>
+        </div>
+        <label for="toggle" class="text-xs text-gray-700 dark:text-white">Dark mode</label>
+  
+        <div
+          class="gallery flex flex-col md:flex-row items-center justify-center flex-wrap my-12 mx-6 space-y-12 md:space-x-6"
+        >
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"
+            class="h-full md:w-1/4 w-1/2 object-contain rounded-xl"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"
+            class="h-full md:w-1/4 w-1/2 object-contain rounded-xl"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"
+            class="h-full md:w-1/4 w-1/2 object-contain rounded-xl"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"
+            class="rounded-xl"
+            object-fill
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"
+            class="h-64 md:w-1/4 w-1/2 object-contain rounded-xl"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"
+            class="h-64 md:w-1/4 w-1/2 object-contain rounded-xl"
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"
+            class="h-64 md:w-1/4 object-contain rounded-xl"
+            object-fill
+          />
+  
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"
+            class="h-64 md:w-1/4 w-1/2 object-contain rounded-xl"
+            object-fill
+          />
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"
+            class="md:w-1/4 w-1/2 object-contain rounded-xl"
+            object-fill
+          />
+        </div>
+      </div>
+     
+    </div>
+      
+    </div>
+
+
+    <script>
+      document.getElementById('toggle').addEventListener('change', function() {
+        if(this.checked) {
+          document.documentElement.classList.add('dark');
+         
+        }
+        else {
+          document.documentElement.classList.remove('dark');
+        
+        }
+      })
+      </script>
+  </body>
+</html>
